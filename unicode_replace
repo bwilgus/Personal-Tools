@@ -1,0 +1,10 @@
+##test needs to be a pandas dataframe, csv link is a string filepath
+
+import pandas as pd
+
+def uniReplace(test, csvlink):
+    test.Name = test.Name.str.replace(u'\xa0', ' ')
+
+    test.to_csv(csvlink)
+    
+    
